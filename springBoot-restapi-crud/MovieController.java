@@ -36,7 +36,7 @@ public ResponseEntity<Movie> createMovie(@RequestBody Movie movie){
 @PutMapping("/movies/{id}")
 public ResponseEntity<Movie> updateMovie( @PathVariable long id,@RequestBody Movie movie){
 	movie.setId(id);
-	return ResponseEntity.ok.body(movieservice.updateMovie(id, movie));
+	return ResponseEntity.ok.body(movieservice.updateMovie(movie));
 }
 
 @DeleteMapping("/movies/{id}")
