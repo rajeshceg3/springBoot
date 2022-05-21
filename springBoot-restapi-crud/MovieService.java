@@ -34,4 +34,31 @@ public class MovieService implements MovieServiceInterface{
            throw new ResourceNotFoundException("Resource not found with ID " + movie.getID());
        }
     }
+
+    @Override
+    public List<Movie> getAllMovies(){
+        return movierepository.findAll();
+    }
+
+    @Override
+    public Movie getMovieById(long id){
+        Optional<Movie> movieDB = movierepository.findById(id);
+        if( movieDB.isPresent()){
+            return movieDB.get();
+        }
+        else{
+            throw new ResourceNotFoundException("Movie not found with id " + id);
+        }
+    }
+
+    @Override
+    public void deleteMovie(long id){
+        Optional<Movie> movieDB = movierepository.findById(id);
+        if (movieDB.isPresent()){
+            movierepository.delete(movieDB.get());
+        }
+        else{
+            throw new ResourceNotFoundException("Movie not found with id "+ id);
+        }
+    }
 }
