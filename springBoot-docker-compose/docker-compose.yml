@@ -1,0 +1,22 @@
+version: '3'
+services: 
+  user:
+    container_name: user_service
+    build:
+      context: ./user_service
+      args:
+        JDK_VERSION: 11
+      dockerfile: Dockerfile
+    image: rajeshceg3/user
+    ports:
+      - 8081:8081
+  bank:
+    container_name: bank_service
+    build:
+      context: ./bank_service
+      dockerfile: Dockerfile
+    image: rajeshceg3/bank
+    ports:
+      - 8083:8082
+    links:
+      - "user:user_service"        
