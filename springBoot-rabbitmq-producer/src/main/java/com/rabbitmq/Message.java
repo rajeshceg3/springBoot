@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Message{
-    private String msgId;
-    private String msg;
-    private Date msgDate;
+    private String messageId;
+    private String message;
+    private Date messageDate;
 }

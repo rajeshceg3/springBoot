@@ -17,9 +17,11 @@ private RabbitTemplate rabbitTemplate;
 
 @PostMapping("/publish")
 public String publish(@RequestBody Message msg){
-    msg.setMsgId(UUID.randomUUID().toString());
-    msg.setMsgDate( new Date());
-    //
+    msg.setMessageId(UUID.randomUUID().toString());
+    msg.setMessageDate( new Date());
+    rabbitTemplate.convertAndSend(  MQConfig.EXCHANGE,
+                                    MQConfig.ROUTING_KEY,
+                                    msg);
     return "Message sent";
 }
 }
