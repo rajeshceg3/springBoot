@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springBoot</groupId>
-	<artifactId>springBoot-rabbitmq-producer</artifactId>
+	<artifactId>spring-rabbitmq-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springBoot-rabbitmq-producer</name>
-	<description> Spring Boot RabbitMq producer</description>
+	<name>spring-rabbitmq-consumer</name>
+	<description>Spring Boot RabbitMq consumer</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
