@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>net.springboot.mongoapp</groupId>
-	<artifactId>springboot-rest-mongodb</artifactId>
+	<artifactId>springboot-restapi-crud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
