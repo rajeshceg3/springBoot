@@ -3,7 +3,7 @@ services:
   user:
     container_name: user_service
     build:
-      context: ./user_service
+      context: ./user-service
       args:
         JDK_VERSION: 11
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
   bank:
     container_name: bank_service
     build:
-      context: ./bank_service
+      context: ./bank-service
       dockerfile: Dockerfile
     image: rajeshceg3/bank
     ports:

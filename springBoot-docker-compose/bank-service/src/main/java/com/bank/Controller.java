@@ -22,7 +22,7 @@ public class Controller{
     @GetMapping("/banks")
     public List<Bank> banks(){
         List<Bank> banks = new ArrayList<>();
-        final String uri = "http://user:8081/api/users:"
+        final String uri = "http://user:8081/api/users:";
         List result = restTemplate.getForObject(uri, List.class);
 
         for( Object user: result){
