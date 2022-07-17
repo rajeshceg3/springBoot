@@ -1,6 +1,6 @@
 package com.restapi.crud;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +21,7 @@ private MovieService movieservice;
 
 @GetMapping("/movies")
 public ResponseEntity<List<Movie>> getMovies(){
-	return ResponseEntity.ok().body(movieservice.getMovies());
+	return ResponseEntity.ok().body(movieservice.getAllMovies());
 }
 
 @GetMapping("/movies/{id}")

@@ -20,7 +20,7 @@ public class MovieService implements MovieServiceInterface{
 
     @Override
     public Movie updateMovie(Movie movie){
-       Optional<Movie> movieDB = movierepository.findById(movie.getID());
+       Optional<Movie> movieDB = movierepository.findById(movie.getId());
        if( movieDB.isPresent()){
            Movie movieUpdate = movieDB.get();
            movieUpdate.setId(movie.getId());
@@ -30,7 +30,7 @@ public class MovieService implements MovieServiceInterface{
            return movieUpdate;
        }
        else{
-           throw new ResourceNotFoundException("Resource not found with ID " + movie.getID());
+           throw new ResourceNotFoundException("Resource not found with ID " + movie.getId());
        }
     }
 

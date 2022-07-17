@@ -15,7 +15,6 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<start-class>Application</start-class>
 	</properties>
 
 	<dependencies>
@@ -35,7 +34,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+			</plugin>			
 		</plugins>
 	</build>
 
