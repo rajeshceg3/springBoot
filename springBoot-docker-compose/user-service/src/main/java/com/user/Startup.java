@@ -13,7 +13,7 @@ public class Startup implements CommandLineRunner{
 UserRepository userRepository;
 
 @Override
-public voic run(String... args) throws Exception {
+public void run(String... args) throws Exception {
     Stream.of("IronMan", "SpiderMan", "WonderWoman")
         .forEach( name ->
             userRepository.save( new User(name))

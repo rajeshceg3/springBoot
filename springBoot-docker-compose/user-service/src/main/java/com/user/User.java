@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Table(name = "users")
-public class user{
+public class User{
     @Id
     @GeneratedValue
     private Long id;
