@@ -5,11 +5,11 @@ public class Movie{
     private String director;
 
     public String getMovieName() {
-        return bookName;
+        return name;
     }
 
-    public void setMovieName(String bookName) {
-        this.bookName = bookName;
+    public void setMovieName(String name) {
+        this.name = name;
     }
 
     public String getDirector() {
@@ -20,8 +20,8 @@ public class Movie{
         this.director = director;
     }
 
-    public Movie(String bookName, String director) {
-        this.bookName = bookName;
+    public Movie(String name, String director) {
+        this.name = name;
         this.director = director;
     }
 
