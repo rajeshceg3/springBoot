@@ -23,7 +23,7 @@ public class Controller{
         //final String uri = "http://user:8081/api/users:";
        final String uri = "https://8081-rajeshceg3-springboot-wje4o2fvjme.ws-us54.gitpod.io/api/";
 
-        List result = restTemplate.getForObject(uri, List.class);
+        List<Object> result = restTemplate.getForObject(uri, List.class);
 
         for( Object user: result){
             LinkedHashMap userMap = (LinkedHashMap) user;
