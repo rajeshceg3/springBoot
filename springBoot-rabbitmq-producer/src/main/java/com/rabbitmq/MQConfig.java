@@ -25,7 +25,6 @@ public class MQConfig{
         return new TopicExchange(EXCHANGE);
     }
 
-
     public Binding binding(Queue queue, TopicExchange exchange){
             return BindingBuilder
                     .bind(queue)
@@ -33,5 +32,16 @@ public class MQConfig{
                     .with(ROUTING_KEY);
     }
 
+    @Bean
+    public MessageConverter messageConverter(){
+        return new Jackson2JsonMessageConverter();
+    }
+
+    @Bean
+    public AmqpTemplate template(ConnectionFactory connectionFactory){
+        RabbitTemplate template = new RabbitTemplate(connectionFactory);
+        template.setMessageConverter(messageConverter());
+        return template;
+    }
 
 }
