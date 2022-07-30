@@ -1,4 +1,4 @@
-package com.sprinboot.kafka.config;
+package com.springboot.kafka.config;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
