@@ -11,7 +11,11 @@ The project is structured as a microservices architecture. Key services include:
 
 ## Prerequisites
 
+
 - Java: Most services use Java 11, but some (e.g., `springBoot-restapi-crud`, `springBoot-security`) use Java 8. Ensure the correct JDK is available for the service you intend to run.
+
+- Java 11 (or later)
+
 - Apache Maven
 - Docker
 - Docker Compose
@@ -42,6 +46,7 @@ This repository contains several other Spring Boot applications, including:
     -   Example Usage: `curl -X POST -H "Content-Type: application/json" -d '{"name":"My Movie", "director":"Some Director"}' http://localhost:8080/publish` (Assuming default port 8080 if not specified elsewhere)
 -   **`springBoot-kafka-consumer`**: This service is likely the consumer for the messages published by `springBoot-kafka-producer`, subscribing to the `imdb` topic to process movie data. (Further details to be added if this service is explored).
     -   To run: `cd springBoot-kafka-consumer && mvn spring-boot:run`
+
 -   **`springBoot-oauth`**: Implements OAuth2 functionalities, likely acting as an authorization server or client. Uses Spring Boot 2.3.1.RELEASE and Java 11. Dependencies include `spring-cloud-starter-oauth2`.
     -   To run: `cd springBoot-oauth && mvn spring-boot:run`
 -   **`springBoot-rabbitmq-producer`**: This service acts as a RabbitMQ producer. It exposes a POST endpoint at `/publish` which accepts a JSON object with a `message` field (e.g., `{"message":"Hello World"}`). This message, along with a system-generated ID and date, is then published as JSON to a RabbitMQ exchange named `message_exchange` with the routing key `message_routingkey`, ultimately intended for a queue named `message_queue`. It uses Spring Boot 2.4.2 and Java 11.
@@ -53,6 +58,8 @@ This repository contains several other Spring Boot applications, including:
     -   To run: `cd springBoot-restapi-crud && mvn spring-boot:run`
 -   **`springBoot-security`**: A Spring Boot application focused on security configurations, potentially related to OAuth2. Uses Spring Boot 2.1.0.RELEASE, Java 8, and includes `spring-security-oauth2`.
     -   To run: `cd springBoot-security && mvn spring-boot:run`
+
+
 
 Instructions for running these services individually will be added here. Typically, they can be run using:
 ```bash
