@@ -40,14 +40,8 @@ public class MovieService implements MovieServiceInterface{
     }
 
     @Override
-    public Movie getMovieById(long id){
-        Optional<Movie> movieDB = movierepository.findById(id);
-        if( movieDB.isPresent()){
-            return movieDB.get();
-        }
-        else{
-            throw new ResourceNotFoundException("Movie not found with id " + id);
-        }
+    public Optional<Movie> getMovieById(long id){
+        return movierepository.findById(id);
     }
 
     @Override
