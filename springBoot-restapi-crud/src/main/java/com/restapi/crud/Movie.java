@@ -14,6 +14,7 @@ public class Movie{
     @Size(max = 100)
     @Indexed(unique = true)
     private String name;
+    @Size(max = 500) // Added validation for description
     private String description;
 
     public long getId(){
